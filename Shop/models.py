@@ -40,7 +40,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=150, null=False, blank=False)
     vendor = models.CharField(max_length=150, null=False, blank=False)
-    product_image = models.ImageField(upload_to=getFileName, null=True, blank=True)
+    product_image = models.ImageField(upload_to='products')
     quantity = models.IntegerField(null=False, blank=False)
     original_price = models.FloatField(null=False, blank=False)
     selling_price = models.FloatField(null=False, blank=False)
