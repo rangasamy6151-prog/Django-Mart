@@ -197,9 +197,8 @@ WSGI_APPLICATION = 'DjangoMart.wsgi.application'
 # RENDER → auto uses DATABASE_URL
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default="mysql://root:root@localhost:3306/shopkart_django",
-        conn_max_age=600,
+    'default': dj_database_url.parse(
+        os.environ.get("DATABASE_URL")
     )
 }
 
