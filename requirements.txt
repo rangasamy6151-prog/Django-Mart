@@ -3,4 +3,3 @@ gunicorn
 dj-database-url
 mysqlclient
 whitenoise
-jazzmin
